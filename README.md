@@ -13,6 +13,7 @@ This portfolio project has a few learning outcomes
 - work with github CLI
 
 Additionally, manual work with minimal AI help will be conducted for the following learning outcomes:
+- Manual setup, review, testing and debugging of API features for learning.
 - Learn to fine-tune LLMs, by applying existing fine tuning concepts outlined in papers such as deepseek r1's reinforcement learning method.
 
 ## Features
