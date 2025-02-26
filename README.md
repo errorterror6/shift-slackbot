@@ -5,6 +5,16 @@
 ## Project Overview
 This SlackBot application integrates Slack with Google Calendar and ChatGPT to help teams manage shifts, schedule meetings, and provide AI-assisted responses to common questions.
 
+## Learning Outcomes
+This portfolio project has a few learning outcomes
+- gain resume points 😁
+- keep up to date with latest (27/2/25, claude code) AI assistant features
+- Learn how to work with latest AI assistants.
+- work with github CLI
+
+Additionally, manual work with minimal AI help will be conducted for the following learning outcomes:
+- Learn to fine-tune LLMs, by applying existing fine tuning concepts outlined in papers such as deepseek r1's reinforcement learning method.
+
 ## Features
 - **Shift Request Detection**: Automatically detects when someone needs their shift covered
 - **Calendar Integration**: Checks your Google Calendar for availability before responding
