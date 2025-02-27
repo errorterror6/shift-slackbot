@@ -27,10 +27,12 @@ As learning to use AI conflicts with learning the concepts themselves, the code 
 ## Project Structure
 ```
 /
-├── slack-api/         # Slack Bot API implementation
-├── gcal-integration/  # Google Calendar integration services
-├── chatgpt-api/       # ChatGPT API integration
-└── front-end/         # Optional web dashboard interface
+├── ai-code/                # AI-generated implementation
+│   ├── slack-api/          # Slack Bot API implementation
+│   ├── gcal-integration/   # Google Calendar integration services
+│   ├── chatgpt-api/        # ChatGPT API integration
+│   └── front-end/          # Optional web dashboard interface
+└── shift-slackbot/         # Manual implementation (coming soon)
 ```
 
 ## Technology Stack
@@ -57,6 +59,7 @@ cd slack-bot
 
 ### 2. Install dependencies
 ```bash
+cd ai-code
 npm install
 ```
 
