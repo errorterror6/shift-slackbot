@@ -8,7 +8,7 @@ This SlackBot application integrates Slack with Google Calendar and ChatGPT to h
 ## Learning Outcomes
 This portfolio project has a few learning outcomes
 - Learn how to work with latest AI assistants.
-- Gain experience working and integrating API's
+- Gain experience working and integrating API's, and using github's CLI
 - fine tune a LLM, based on existing concepts found in papers such as deepseek r1's rf method.
 
 As learning to use AI conflicts with learning the concepts themselves, the code is separated into two sections
