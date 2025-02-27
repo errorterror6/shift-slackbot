@@ -1,0 +1,39 @@
+{
+  "name": "shift-slackbot",
+  "version": "1.0.0",
+  "description": "Slack bot for shift management with Google Calendar and ChatGPT integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "npm run build:slack && npm run build:gcal && npm run build:chatgpt",
+    "build:slack": "cd slack-api && npm run build",
+    "build:gcal": "cd gcal-integration && npm run build",
+    "build:chatgpt": "cd chatgpt-api && npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "slack-api",
+    "gcal-integration",
+    "chatgpt-api",
+    "front-end"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.10.5",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
