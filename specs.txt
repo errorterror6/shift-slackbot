@@ -1,0 +1,240 @@
+-- slack bot --
+ 
+The following specification will highlight a slack bot project to better help the swap and covering of work shifts.
+ 
+The slack bot project will interpret slack messages from a specific channel in a workspace, determine if the message is a coworker (not myself) that requires a shift to be taken for them, check the shift's duration against the user's personal google calendar to check for availabilities and determine if the user is available. If available, the bot will post a reply to the message as the user to take the shift and add that shift automatically to the google calendar with details regarding the class name, and rooms. The bot will NOT automatically receive shifts on the current day.
+ 
+Example inputs are below:
+ 
+message: "Lucas Harvey: Hello, would anyone like to take my lab tomorrow (Thursday) from 12-2pm?"
+google calendar -> available
+response: "sure"
+Google calendar -> new event at Thursday 12-2pm named "H11A tabla"
+ 
+can anyone take the lab portion of H13A?
+google calendar -> not available on Thursday 3-4pm
+no response
+Google calendar -> no new event
+ 
+Can anyone take W11A in-person tut+lab this Wednesday (26th Feb)?
+google calendar -> available
+response: sure.
+Google calendar -> new event named "W11A Quadrangle G031 + tabla"
+ 
+ 
+To give further context regarding the shift system, the format "M16B" means Monday, 4pm class. T14C means Tuesday 2pm and H09B means Thursday 9am class. Classes run from 9am to 8pm in the afternoon. The last letter has no impact on the date/time of the class.
+ 
+Additionally, each class spans 3 hours from the time start, with a tutorial portion taking the first hour and the lab portion taking the final two hours. The bot will be required to determine which portion of the class a swap is required, including the correct class times, availabilities and rooms. A typical abbreviation used is "TLB" which stands for tutorial + lab, which "lab" stands for lab only. However, usually unless explicitly specified, a "tutorial" includes the whole TLB.
+ 
+For the google calendar event, include the correct class name, the full name for the tutorial room and either "tabla" or "bongo" as the lab room.
+ 
+In terms of specific project structures, there should be 3 separate modules for the slack portion, google calendar portion, and chatGPT portions. A simple front end module should also be added to make it easy to start, stop and configure the program (such as signing in to the API's).
+ 
+The GPT portion should be done in c++, whilst the rest in typescript/css/html. Use react library for the simple front-end.
+ 
+This is not part of the current assignment, but in the future the GPT should also be tuneable through python, so ensure the code structure can accommodate for that in the future.
+ 
+A lookup table is available below, detailing class names, rooms, times and the regular tutors for the class.
+Course Timetable 
+Lectures	 	 	 	 
+COMP1521
+1UGA	Week 1-5,7-9	Mon 14:00 – 16:00	J17 Ainsworth G03	Angela Finlayson
+
+ 	Week 1-5,7-10	Wed 14:00 – 16:00	Online YouTube	 
+COMP1521
+1UGB	Week 1-5,7-9	Mon 14:00 – 16:00	Online YouTube	Angela Finlayson
+
+ 	Week 1-5,7-10	Wed 14:00 – 16:00	Online YouTube	 
+Tutorials and Laboratories	 	 	 	 
+M16A
+mon16a	Week 1-5,7-9	Mon 16:00 – 17:00	Online Blackboard Collaborate	Jessica Xu
++ Joanna Wong
+
+ 	Week 1-5,7-9	Mon 17:00 – 19:00	Online Blackboard Collaborate	 
+M16B
+mon16-bongo	Week 1-5,7-9	Mon 16:00 – 17:00	K-D16-G05 Goldstein G05 
+Raymond Li
++ Siyu Qiu
+
+ 	Week 1-5,7-9	Mon 17:00 – 19:00	CSE Lab Bongo Lab K17 G07A	 
+M17A
+mon17-tabla	Week 1-5,7-9	Mon 17:00 – 18:00	K-E15-1046 Quadrangle 1046 	James Appleton
++ Agnes Tjokrosetio
+
+ 	Week 1-5,7-9	Mon 18:00 – 20:00	CSE Lab Tabla Lab K17 G07B	 
+T11A
+tue11-tabla	Week 1-5,7-10	Tue 11:00 – 12:00	K-H13-1040 H13 Lawrence East 1040 	Olivia Ding
++ Callum Reilly
+
+ 	Week 1-5,7-10	Tue 12:00 – 14:00	CSE Lab Tabla Lab K17 G07B	 
+T11B
+tue11-bongo	Week 1-5,7-10	Tue 11:00 – 12:00	K-H13-1041 H13 Lawrence East 1041 	Selina Wu
++ Joanna Wong
+
+ 	Week 1-5,7-10	Tue 12:00 – 14:00	CSE Lab Bongo Lab K17 G07A	 
+T13A
+tue13-tabla	Week 1-5,7-10	Tue 13:00 – 14:00	K-E4-115 Squarehouse 115 	Alex Blackmore
++ Selina Wu
+
+ 	Week 1-5,7-10	Tue 14:00 – 16:00	CSE Lab Tabla Lab K17 G07B	 
+T13B
+tue13-bongo	Week 1-5,7-10	Tue 13:00 – 14:00	K-E15-G054 Quadrangle G054 	Abby Lin
++ Flynn Lambrechts
+
+ 	Week 1-5,7-10	Tue 14:00 – 16:00	CSE Lab Bongo Lab K17 G07A	 
+T15A
+tue15-bongo	Week 1-5,7-10	Tue 15:00 – 16:00	K-D16-G05 Goldstein G05 
+Callum Reilly
++ Michael He
+
+ 	Week 1-5,7-10	Tue 16:00 – 18:00	CSE Lab Bongo Lab K17 G07A	 
+T15B
+tue15-tabla	Week 1-5,7-10	Tue 15:00 – 16:00	K-E15-G054 Quadrangle G054 	Tasfia Ahmed
++ Agnes Tjokrosetio
+
+ 	Week 1-5,7-10	Tue 16:00 – 18:00	CSE Lab Tabla Lab K17 G07B	 
+T15C
+tue15c	Week 1-5,7-10	Tue 15:00 – 16:00	Online Blackboard Collaborate	Jessica Xu
++ Olivia Ding
+
+ 	Week 1-5,7-10	Tue 16:00 – 18:00	Online Blackboard Collaborate	 
+T17A
+tue17-tabla	Week 1-5,7-10	Tue 17:00 – 18:00	K-D16-G07 Goldstein G07 
+Siyu Qiu
++ Philip Tokareff
+
+ 	Week 1-5,7-10	Tue 18:00 – 20:00	CSE Lab Tabla Lab K17 G07B	 
+T17B
+tue17-bongo	Week 1-5,7-10	Tue 17:00 – 18:00	K-G14-252 Webster 252 
+Abby Lin
++ Daniel Chen
+
+ 	Week 1-5,7-10	Tue 18:00 – 20:00	CSE Lab Bongo Lab K17 G07A	 
+W09A
+wed09-tabla	Week 1-5,7-10	Wed 09:00 – 10:00	K-E15-G047 Quadrangle G047 	Cass Eliot
++ Sumit Kamath
+
+ 	Week 1-5,7-10	Wed 10:00 – 12:00	CSE Lab Tabla Lab K17 G07B	 
+W09B
+wed09-bongo	Week 1-5,7-10	Wed 09:00 – 10:00	K-H13-1042 H13 Lawrence East 1042 	Anna Brew
++ Ashley Saipaia
+
+ 	Week 1-5,7-10	Wed 10:00 – 12:00	CSE Lab Bongo Lab K17 G07A	 
+W11A
+wed11-tabla	Week 1-5,7-10	Wed 11:00 – 12:00	K-E15-G031 Quadrangle G031 	Daniel Chen
++ Hanan Hassan
+
+ 	Week 1-5,7-10	Wed 12:00 – 14:00	CSE Lab Tabla Lab K17 G07B	 
+W11B
+wed11-bongo	Week 1-5,7-10	Wed 11:00 – 12:00	K-K15-G32 Old Main Building G32 	Alex Blackmore
++ James Appleton
+
+ 	Week 1-5,7-10	Wed 12:00 – 14:00	CSE Lab Bongo Lab K17 G07A	 
+W16A
+wed16a	Week 1-5,7-10	Wed 16:00 – 17:00	Online Blackboard Collaborate	Jimmy Kirkpatrick
++ Brodie Hales
+
+ 	Week 1-5,7-10	Wed 17:00 – 19:00	Online Blackboard Collaborate	 
+W17A
+wed17-bongo	Week 1-5,7-10	Wed 17:00 – 18:00	K-G14-252 Webster 252 
+Tasfia Ahmed
++ Amy Hodder
+
+ 	Week 1-5,7-10	Wed 18:00 – 20:00	CSE Lab Bongo Lab K17 G07A	 
+H09A
+thu09-bongo	Week 1-5,7-10	Thu 09:00 – 10:00	K-M15-540 Rupert Myers 540 	Jack Robbers
++ Alex Knight-Viale
+
+ 	Week 1-5,7-10	Thu 10:00 – 12:00	CSE Lab Bongo Lab K17 G07A	 
+H09B
+thu09-tabla	Week 1-5,7-10	Thu 09:00 – 10:00	K-H13-1040 H13 Lawrence East 1040 	Anna Brew
++ Sumit Kamath
+
+ 	Week 1-5,7-10	Thu 10:00 – 12:00	CSE Lab Tabla Lab K17 G07B	 
+H11A
+thu11-tabla	Week 1-5,7-10	Thu 11:00 – 12:00	K-H13-1040 H13 Lawrence East 1040 	Hanan Hassan
++ Lucas Harvey
+
+ 	Week 1-5,7-10	Thu 12:00 – 14:00	CSE Lab Tabla Lab K17 G07B	 
+H11B
+thu11-bongo	Week 1-5,7-10	Thu 11:00 – 12:00	K-H13-2063 H13 Lawrence East 2063 	Isabel Wee
++ Meredith Zhang
+
+ 	Week 1-5,7-10	Thu 12:00 – 14:00	CSE Lab Bongo Lab K17 G07A	 
+H13A
+thu13-bongo	Week 1-5,7-10	Thu 13:00 – 14:00	K-F8-276 Law Building 276 	Xing He
++ Jack Robbers
+
+ 	Week 1-5,7-10	Thu 14:00 – 16:00	CSE Lab Bongo Lab K17 G07A	 
+H13B
+thu13-tabla	Week 1-5,7-10	Thu 13:00 – 14:00	K-F8-202 Law Building 202 	Larry Tang
++ Philip Tokareff
+
+ 	Week 1-5,7-10	Thu 14:00 – 16:00	CSE Lab Tabla Lab K17 G07B	 
+H15A
+thu15a	Week 1-5,7-10	Thu 15:00 – 16:00	Online Blackboard Collaborate	Alex Knight-Viale
++ Ashley Saipaia
+
+ 	Week 1-5,7-10	Thu 16:00 – 18:00	Online Blackboard Collaborate	 
+H15B
+thu15-bongo	Week 1-5,7-10	Thu 15:00 – 16:00	K-H20-102 Civil Engineering 102 	JJ Roberts-White
++ Henry Guo
+
+ 	Week 1-5,7-10	Thu 16:00 – 18:00	CSE Lab Bongo Lab K17 G07A	 
+H15C
+thu15-tabla	Week 1-5,7-10	Thu 15:00 – 16:00	K-M15-430 Ruper Myers 430 	Olivia Ding
++ Brodie Hales
+
+ 	Week 1-5,7-10	Thu 16:00 – 18:00	CSE Lab Tabla Lab K17 G07B	 
+H17A
+thu17-tabla	Week 1-5,7-10	Thu 17:00 – 18:00	K-H13-2060 H13 Lawrence East 2060 	Xing He
++ Amy Hodder
+
+ 	Week 1-5,7-10	Thu 18:00 – 20:00	CSE Lab Tabla Lab K17 G07B	 
+H17B
+thu17-bongo	Week 1-5,7-10	Thu 17:00 – 18:00	K-H6-G16 Tyree Energy Technology G16 	Jonah Hopkin
++ Ethan Haffenden
+
+ 	Week 1-5,7-10	Thu 18:00 – 20:00	CSE Lab Bongo Lab K17 G07A	 
+F09A
+fri09-bongo	Week 1-5,7-8	Fri 09:00 – 10:00	K-D16-G01 Goldstein G01 
+Flynn Lambrechts
++ Sophie Fox
+
+ 	Week 1-5,7-8	Fri 10:00 – 12:00	CSE Lab Bongo Lab K17 G07A	 
+F11A
+fri11-tabla	Week 1-5,7-8	Fri 11:00 – 12:00	K-D16-G01 Goldstein G01 
+Cass Eliot
++ Larry Tang
+
+ 	Week 1-5,7-8	Fri 12:00 – 14:00	CSE Lab Tabla Lab K17 G07B	 
+F11B
+fri11-bongo	Week 1-5,7-8	Fri 11:00 – 12:00	K-M15-510 Rupert Myers 510 	Isabel Wee
++ Jonah Hopkin
+
+ 	Week 1-5,7-8	Fri 12:00 – 14:00	CSE Lab Bongo Lab K17 G07A	 
+F12A
+fri12a	Week 1-5,7-8	Fri 12:00 – 13:00	Online Blackboard Collaborate	Jimmy Kirkpatrick
++ Sophie Fox
+
+ 	Week 1-5,7-8	Fri 13:00 – 15:00	Online Blackboard Collaborate	 
+F13A
+fri13-bongo	Week 1-5,7-8	Fri 13:00 – 14:00	K-G14-252 Webster 252 
+Henry Guo
++ Michael He
+
+ 	Week 1-5,7-8	Fri 14:00 – 16:00	CSE Lab Bongo Lab K17 G07A	 
+F13B
+fri13-tabla	Week 1-5,7-8	Fri 13:00 – 14:00	K-F8-301 Law Building 301 	Lucas Harvey
++ Meredith Zhang
+
+ 	Week 1-5,7-8	Fri 14:00 – 16:00	CSE Lab Tabla Lab K17 G07B	 
+F15A
+fri15-bongo	Week 1-5,7-8	Fri 15:00 – 16:00	K-G14-252 Webster 252 
+Raymond Li
++ Isabel Wee
+
+ 	Week 1-5,7-8	Fri 16:00 – 18:00	CSE Lab Bongo Lab K17 G07A	 
+ 
+ 
+
