@@ -7,14 +7,14 @@ This SlackBot application integrates Slack with Google Calendar and ChatGPT to h
 
 ## Learning Outcomes
 This portfolio project has a few learning outcomes
-- gain resume points 😁
-- keep up to date with latest (27/2/25, claude code) AI assistant features
 - Learn how to work with latest AI assistants.
-- work with github CLI
+- Gain experience working and integrating API's
+- fine tune a LLM, based on existing concepts found in papers such as deepseek r1's rf method.
 
-Additionally, manual work with minimal AI help will be conducted for the following learning outcomes:
-- Manual setup, review, testing and debugging of API features for learning.
-- Learn to fine-tune LLMs, by applying existing fine tuning concepts outlined in papers such as deepseek r1's reinforcement learning method.
+As learning to use AI conflicts with learning the concepts themselves, the code is separated into two sections
+- folder "ai-code" will be almost all AI generated, AI reviewed and AI debugged. it will satisfy the first learning outcome and provide a sample implementation (assuming it works) if I get stuck on the second learning outcome.
+- folder "shift-slackbot" will be implemented by hand, with minimal AI assistance beyond autocompletion or simple function generation.
+- Finally, after the MVP works, the LLM will be fine-tuned for this task - to be completed with minimal AI assistance.
 
 ## Features
 - **Shift Request Detection**: Automatically detects when someone needs their shift covered
@@ -27,10 +27,12 @@ Additionally, manual work with minimal AI help will be conducted for the followi
 ## Project Structure
 ```
 /
-├── slack-api/         # Slack Bot API implementation
-├── gcal-integration/  # Google Calendar integration services
-├── chatgpt-api/       # ChatGPT API integration
-└── front-end/         # Optional web dashboard interface
+├── ai-code/                # AI-generated implementation
+│   ├── slack-api/          # Slack Bot API implementation
+│   ├── gcal-integration/   # Google Calendar integration services
+│   ├── chatgpt-api/        # ChatGPT API integration
+│   └── front-end/          # Optional web dashboard interface
+└── shift-slackbot/         # Manual implementation (coming soon)
 ```
 
 ## Technology Stack
@@ -57,6 +59,7 @@ cd slack-bot
 
 ### 2. Install dependencies
 ```bash
+cd ai-code
 npm install
 ```
 
