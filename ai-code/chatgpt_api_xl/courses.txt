@@ -1,0 +1,174 @@
+M16A - Monday
+    - Tutorial: 16:00 – 17:00 (Online Blackboard Collaborate)
+    - Lab: 17:00 – 19:00 (Online Blackboard Collaborate)
+    - 老师+助教: Jessica Xu, Joanna Wong
+
+M16B - Monday
+    - Tutorial: 16:00 – 17:00 (Goldstein G05)
+    - Lab: 17:00 – 19:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Raymond Li, Siyu Qiu
+
+M17A - Monday
+    - Tutorial: 17:00 – 18:00 (Quadrangle 1046)
+    - Lab: 18:00 – 20:00 (Tabla Lab K17 G07B)
+    - 老师+助教: James Appleton, Agnes Tjokrosetio
+
+T11A - Tuesday
+    - Tutorial: 11:00 – 12:00 (H13 Lawrence East 1040)
+    - Lab: 12:00 – 14:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Olivia Ding, Callum Reilly
+
+T11B - Tuesday
+    - Tutorial: 11:00 – 12:00 (H13 Lawrence East 1041)
+    - Lab: 12:00 – 14:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Selina Wu, Joanna Wong
+
+T13A - Tuesday
+    - Tutorial: 13:00 – 14:00 (Law Building 201)
+    - Lab: 14:00 – 16:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Alex Blackmore, Selina Wu
+
+T13B - Tuesday
+    - Tutorial: 13:00 – 14:00 (Quadrangle G054)
+    - Lab: 14:00 – 16:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Abby Lin, Flynn Lambrechts
+
+T15A - Tuesday
+    - Tutorial: 15:00 – 16:00 (Goldstein G05)
+    - Lab: 16:00 – 18:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Callum Reilly, Ashley Saipaia
+
+T15B - Tuesday
+    - Tutorial: 15:00 – 16:00 (Quadrangle G054)
+    - Lab: 16:00 – 18:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Tasfia Ahmed, Agnes Tjokrosetio
+
+T15C - Tuesday
+    - Tutorial: 15:00 – 16:00 (Online Blackboard Collaborate)
+    - Lab: 16:00 – 18:00 (Online Blackboard Collaborate)
+    - 老师+助教: Jessica Xu, Olivia Ding
+
+T17A - Tuesday
+    - Tutorial: 17:00 – 18:00 (Goldstein G07)
+    - Lab: 18:00 – 20:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Siyu Qiu, Philip Tokareff
+
+T17B - Tuesday
+    - Tutorial: 17:00 – 18:00 (Webster 252)
+    - Lab: 18:00 – 20:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Abby Lin, Daniel Chen
+
+W09A - Wednesday
+    - Tutorial: 09:00 – 10:00 (Quadrangle G047)
+    - Lab: 10:00 – 12:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Cass Eliot, Sumit Kamath
+
+W09B - Wednesday
+    - Tutorial: 09:00 – 10:00 (H13 Lawrence East 1042)
+    - Lab: 10:00 – 12:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Anna Brew, Ashley Saipaia
+
+W11A - Wednesday
+    - Tutorial: 11:00 – 12:00 (Quadrangle G031)
+    - Lab: 12:00 – 14:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Daniel Chen, Hanan Hassan
+
+W11B - Wednesday
+    - Tutorial: 11:00 – 12:00 (Old Main Building G32)
+    - Lab: 12:00 – 14:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Alex Blackmore, James Appleton
+
+W17A - Wednesday
+    - Tutorial: 17:00 – 18:00 (Webster 252)
+    - Lab: 18:00 – 20:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Tasfia Ahmed, Amy Hodder
+
+H09A - Thursday
+    - Tutorial: 09:00 – 10:00 (Rupert Myers 540)
+    - Lab: 10:00 – 12:00 (Bongo Lab K17 G07A)
+    - 老师+助教: Jack Robbers, Alex Knight-Viale
+
+H09B - Thursday
+    - Tutorial: 09:00 – 10:00 (H13 Lawrence East 1040)
+    - Lab: 10:00 – 12:00 (Tabla Lab K17 G07B)
+    - 老师+助教: Anna Brew, Sumit Kamath
+
+H11A - Thursday
+    - Tutorial: 11:00 – 12:00 (H13 Lawrence East 1040)
+    - Lab: 12:00 – 14:00 (Tabla Lab K17 G07B)
+    - 老师: Hanan Hassan, Lucas Harvey
+
+H11B - Thursday
+    - Tutorial: 11:00 – 12:00 (H13 Lawrence East 2063)
+    - Lab: 12:00 – 14:00 (Bongo Lab K17 G07A)
+    - 老师: Isabel Wee, Meredith Zhang
+
+H13A - Thursday
+    - Tutorial: 13:00 – 14:00 (Law Building 276)
+    - Lab: 14:00 – 16:00 (Bongo Lab K17 G07A)
+    - 老师: Xing He, Jack Robbers
+
+H13B - Thursday
+    - Tutorial: 13:00 – 14:00 (Law Building 202)
+    - Lab: 14:00 – 16:00 (Tabla Lab K17 G07B)
+    - 老师: Larry Tang, Philip Tokareff
+
+H15A - Thursday
+    - Tutorial: 15:00 – 16:00 (Online Blackboard Collaborate)
+    - Lab: 16:00 – 18:00 (Online Blackboard Collaborate)
+    - 老师: Alex Knight-Viale, Ashley Saipaia
+
+H15B - Thursday
+    - Tutorial: 15:00 – 16:00 (Civil Engineering 102)
+    - Lab: 16:00 – 18:00 (Bongo Lab K17 G07A)
+    - 老师: JJ Roberts-White, Henry Guo
+
+H15C - Thursday
+    - Tutorial: 15:00 – 16:00 (Rupert Myers 430)
+    - Lab: 16:00 – 18:00 (Tabla Lab K17 G07B)
+    - 老师: Olivia Ding, Brodie Hales
+
+H17A - Thursday
+    - Tutorial: 17:00 – 18:00 (H13 Lawrence East 2060)
+    - Lab: 18:00 – 20:00 (Tabla Lab K17 G07B)
+    - 老师: Xing He, Amy Hodder
+
+H17B - Thursday
+    - Tutorial: 17:00 – 18:00 (Tyree Energy Technology G16)
+    - Lab: 18:00 – 20:00 (Bongo Lab K17 G07A)
+    - 老师: Jonah Hopkin, Ethan Haffenden
+
+F09A - Friday
+    - Tutorial: 09:00 – 10:00 (Goldstein G01)
+    - Lab: 10:00 – 12:00 (Bongo Lab K17 G07A)
+    - 老师: Flynn Lambrechts, Sophie Fox
+
+F11A - Friday
+    - Tutorial: 11:00 – 12:00 (Goldstein G01)
+    - Lab: 12:00 – 14:00 (Tabla Lab K17 G07B)
+    - 老师: Cass Eliot, Larry Tang
+
+F11B - Friday
+    - Tutorial: 11:00 – 12:00 (Rupert Myers 510)
+    - Lab: 12:00 – 14:00 (Bongo Lab K17 G07A)
+    - 老师: Isabel Wee, Jonah Hopkin
+
+F12A - Friday
+    - Tutorial: 12:00 – 13:00 (Online Blackboard Collaborate)
+    - Lab: 13:00 – 15:00 (Online Blackboard Collaborate)
+    - 老师: Jimmy Kirkpatrick, Sophie Fox
+
+F13A - Friday
+    - Tutorial: 13:00 – 14:00 (Webster 252)
+    - Lab: 14:00 – 16:00 (Bongo Lab K17 G07A)
+    - 老师: Henry Guo, Xing He
+
+F13B - Friday
+    - Tutorial: 13:00 – 14:00 (Law Building 301)
+    - Lab: 14:00 – 16:00 (Tabla Lab K17 G07B)
+    - 老师: Lucas Harvey, Meredith Zhang
+
+F15A - Friday
+    - Tutorial: 15:00 – 16:00 (Webster 252)
+    - Lab: 16:00 – 18:00 (Bongo Lab K17 G07A)
+    - 老师: Raymond Li, Isabel Wee

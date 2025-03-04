@@ -1,0 +1,15 @@
+{
+    "day": "Friday",
+    "course_code": "F09A",
+    "type": "lab",
+    "lab-time": "10:00 - 12:00",
+    "lab-room": "Bongo Lab K17 G07A"
+}
+
+{
+    "day": "Friday",
+    "course_code": "F12A",
+    "type": "lab",
+    "lab-time": "13:00 - 15:00",
+    "lab-room": "Online Blackboard Collaborate"
+}
